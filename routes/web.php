@@ -20,6 +20,10 @@ Route::get('/', [BlogController::class, 'index'])->name('news.index');
 // TODO : Tambah kan route get ke url /update sambungkan ke controller BlogController dengan method update named route news.update 
 // TODO : Tambah kan route get ke url /destroy sambungkan ke controller BlogController dengan method destroy named route news.destroy 
 
+//sokosama
+//lagi
+//tes lah
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
