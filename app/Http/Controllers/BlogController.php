@@ -38,6 +38,7 @@ class BlogController extends Controller
         $news = News::latest()->first();
 
         // TODO : Update 'title' menjadi 'Judul Baru Updated' 'content' menjadi 'Berita Baru Updated'
+        // ini pakai mass update :> ada cara lain juga
         $news->update([
             'title' => 'Judul Baru Updated',
             'content' => 'Berita Baru Updated'
@@ -50,6 +51,7 @@ class BlogController extends Controller
     public function destroy()
     {
         // TODO : Gunakan model news untuk mengambil data terakhir pada tabel news
+        // cheeky tactics ini, tapi kok bisa :>? dan kenapa kok dipersulit :?
         $news = News::latest()->first();
 
         // TODO : Hapus data tersebut
