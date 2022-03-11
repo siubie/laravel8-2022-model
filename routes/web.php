@@ -22,7 +22,7 @@ Route::get('/store', [BlogController::class, 'store'])->name('news.store');
 // TODO : Tambah kan route get ke url /update sambungkan ke controller BlogController dengan method update named route news.update
 Route::get('/update', [BlogController::class, 'update'])->name('news.update');
 // TODO : Tambah kan route get ke url /destroy sambungkan ke controller BlogController dengan method destroy named route news.destroy
-Route::get('/destory', [BlogController::class, 'destory'])->name('news.destory');
+Route::get('/destroy', [BlogController::class, 'destroy'])->name('news.destroy');
 
 Auth::routes();
 

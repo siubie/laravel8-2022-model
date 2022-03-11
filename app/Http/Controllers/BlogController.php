@@ -13,6 +13,7 @@ class BlogController extends Controller
     {
         // TODO : Buatlah pagination dengan eloquent dan tampilkan news per 5 data
         $news = News::orderBy('id', 'desc')->simplePaginate(5); // sebenernya ada cara lagi :>
+
         // TODO : Return view welcome dengan data news
         return view('welcome', compact('news'));
     }
@@ -20,9 +21,12 @@ class BlogController extends Controller
     public function store()
     {
         // TODO : Gunakan model news untuk menyimpan data ke database dengan menggunakan method create berilah parameter 'title' dengan nilai "Judul Baru", dan parameter 'content' dengan nilai "Berita Baru"
-        $news = new News();
-        $news->title = input('Judul Baru');
+        $news = News::create([
+            'title' => 'Judul Baru',
+            'content' => 'Berita Baru',
         ]);
+        $news->save();
+
         // TODO : Buatkan Redirect ke route named 'news.index'
         return redirect()->route('news.index');
     }
