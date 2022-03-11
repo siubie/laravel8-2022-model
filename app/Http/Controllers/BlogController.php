@@ -48,7 +48,7 @@ class BlogController extends Controller
         // TODO : Gunakan model news untuk mengambil data terakhir pada tabel news 
         $news = News::latest()->first();
         // TODO : Hapus data tersebut  
-        $news->destroy();
+        $news->delete();
         // TODO : Buatkan Redirect ke route named 'news.index' 
         return redirect()->route('news.index');
     }
