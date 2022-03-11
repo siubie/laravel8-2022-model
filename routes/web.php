@@ -22,6 +22,7 @@ Route::get('/', [BlogController::class, 'index'])->name('news.index');
 
 //sokosama
 //lagi
+//tes lah
 
 Auth::routes();
 
