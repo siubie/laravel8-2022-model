@@ -21,6 +21,7 @@ Route::get('/', [BlogController::class, 'index'])->name('news.index');
 // TODO : Tambah kan route get ke url /destroy sambungkan ke controller BlogController dengan method destroy named route news.destroy 
 
 //sokosama
+//lagi
 
 Auth::routes();
 
