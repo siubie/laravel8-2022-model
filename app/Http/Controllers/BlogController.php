@@ -42,5 +42,7 @@ class BlogController extends Controller
         // TODO : Gunakan model news untuk mengambil data terakhir pada tabel news 
         // TODO : Hapus data tersebut  
         // TODO : Buatkan Redirect ke route named 'news.index' 
+        return News::latest()->first()->delete()
+        ? redirect('/') : redirect('/');
     }
 }
