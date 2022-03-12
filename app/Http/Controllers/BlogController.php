@@ -29,11 +29,11 @@ class BlogController extends Controller
     public function update()
     {
         // TODO : Gunakan model news untuk mengambil data terakhir pada tabel news 
-        // TODO : Update 'title' menjadi 'Judul Baru Updated' 'content' menjadi 'Judul Baru Updated'
+        // TODO : Update 'title' menjadi 'Judul Baru Updated' 'content' menjadi 'Berita Baru Updated'
         // TODO : Buatkan Redirect ke route named 'news.index' 
         return News::latest()->first()->update([
             'title' => 'Judul Baru Updated',
-            'content' => 'Judul Baru Updated',
+            'content' => 'Berita Baru Updated',
         ]) ? redirect('/') : redirect('/');
     }
 
