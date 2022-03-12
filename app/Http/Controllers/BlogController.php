@@ -20,7 +20,7 @@ class BlogController extends Controller
     {
         // TODO : Gunakan model news untuk menyimpan data ke database dengan menggunakan method create berilah parameter 'title' dengan nilai "Judul Baru", dan parameter 'content' dengan nilai "Berita Baru"
         // TODO : Buatkan Redirect ke route named 'news.index'
-        $news = News::create([
+        News::create([
             'title' => 'Judul Baru',
             'content' => 'Berita Baru',
         ]);
@@ -44,5 +44,7 @@ class BlogController extends Controller
         // TODO : Gunakan model news untuk mengambil data terakhir pada tabel news
         // TODO : Hapus data tersebut
         // TODO : Buatkan Redirect ke route named 'news.index'
+        News::latest()->first()->delete();
+        return redirect('/');
     }
 }
