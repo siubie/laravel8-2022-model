@@ -17,8 +17,9 @@
                         </div>
                     </div>
                 @endforelse
-                {{ $news->links() }}
+                {{-- {{ $news->links() }} --}}
             </div>
         </div>
     </div>
 @endsection
+
