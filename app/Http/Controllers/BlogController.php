@@ -19,7 +19,12 @@ class BlogController extends Controller
     public function store()
     {
         // TODO : Gunakan model news untuk menyimpan data ke database dengan menggunakan method create berilah parameter 'title' dengan nilai "Judul Baru", dan parameter 'content' dengan nilai "Berita Baru"
+        News::create([
+            'title'     => 'Judul Baru',
+            'content'   => 'Berita Baru'
+        ]);
         // TODO : Buatkan Redirect ke route named 'news.index' 
+        return redirect('/');
     }
 
     public function update()
