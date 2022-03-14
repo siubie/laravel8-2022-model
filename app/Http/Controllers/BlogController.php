@@ -30,7 +30,7 @@ class BlogController extends Controller
     public function update()
     {
         // TODO : Gunakan model news untuk mengambil data terakhir pada tabel news
-        $news = News::orderBy('id', 'desc')->first;
+        $news = News::orderBy('id', 'desc')->first();
         // TODO : Update 'title' menjadi 'Judul Baru Updated' 'content' menjadi 'Berita Baru Updated'
         $news->update([
             'title' => 'Judul Baru Updated',
@@ -43,7 +43,10 @@ class BlogController extends Controller
     public function destroy()
     {
         // TODO : Gunakan model news untuk mengambil data terakhir pada tabel news
+        $news = News::orderBy('id', 'desc')->first();
         // TODO : Hapus data tersebut
+        $news->delete();
         // TODO : Buatkan Redirect ke route named 'news.index'
+        return redirect()->route('news.index');
     }
 }
