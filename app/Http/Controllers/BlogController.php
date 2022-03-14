@@ -11,7 +11,9 @@ class BlogController extends Controller
     public function index()
     {
         // TODO : Buatlah pagination dengan eloquent dan tampilkan news per 5 data
+        $news = News:: orderBy('created_at','DESC')->paginate(5);
         // TODO : Return view welcome dengan data news
+        return view('welcome',compact('news'));
     }
 
     public function store()
