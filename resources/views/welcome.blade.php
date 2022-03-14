@@ -17,7 +17,9 @@
                         </div>
                     </div>
                 @endforelse
-                {{ $news->links() }}
+                <div class="mt-2">
+                    {{ $news->links()}}
+                </div>
             </div>
         </div>
     </div>
