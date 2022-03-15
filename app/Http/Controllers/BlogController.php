@@ -25,7 +25,7 @@ class BlogController extends Controller
             'content'=> 'Berita Baru'
         ]);
         // TODO : Buatkan Redirect ke route named 'news.index' 
-        return route('news,index');
+        return redirect()->route('news,index');
     }
 
     public function update()
@@ -37,7 +37,7 @@ class BlogController extends Controller
             'content' => 'Berita Baru Update',
         ]);
         // TODO : Buatkan Redirect ke route named 'news.index'
-        return route('news.index'); 
+        return redirect()->route('news.index'); 
     }
 
     public function destroy()
@@ -47,6 +47,6 @@ class BlogController extends Controller
         // TODO : Hapus data tersebut  
         $news->delete();
         // TODO : Buatkan Redirect ke route named 'news.index' 
-        return route('news.index');
+        return redirect()->route('news.index')
     }
 }
